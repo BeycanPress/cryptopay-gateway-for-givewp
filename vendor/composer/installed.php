@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'fac201691b8dac38cc9149a432161838d8f95878',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,18 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'fac201691b8dac38cc9149a432161838d8f95878',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'beycanpress/cryptopay-integrator' => array(
-            'pretty_version' => '0.1.7',
-            'version' => '0.1.7.0',
-            'reference' => '94c4b4a91b304bfbb8a2c430cc5f0c141143a30e',
+            'pretty_version' => '0.1.8',
+            'version' => '0.1.8.0',
+            'reference' => 'c28bbee3ca84fd1e4ca02f4867f6dadbee0c117d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../beycanpress/cryptopay-integrator',
             'aliases' => array(),

@@ -190,14 +190,26 @@ class Helpers
 
         if ($token && Session::has($token)) {
             extract(Session::get($token));
+
+            if (!isset($params)) {
+                $params = [];
+            }
+
+            $args = [
+                $addon,
+                (array) $order,
+                array_merge(
+                    (array) $params,
+                    [
+                        'token' => $token
+                    ]
+                )
+            ];
+
             if (Type::PRO === $type) {
-                $cryptopay = self::createProPayment($addon, (array) $order, [
-                    'token' => $token
-                ]);
+                $cryptopay = self::createProPayment(...$args);
             } else {
-                $cryptopay = self::createLitePayment($addon, (array) $order, [
-                    'token' => $token
-                ]);
+                $cryptopay = self::createLitePayment(...$args);
             }
             require dirname(__DIR__) . '/views/pay.php';
             exit;
