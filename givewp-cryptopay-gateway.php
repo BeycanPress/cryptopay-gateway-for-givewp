@@ -46,7 +46,7 @@ if (!defined('GIVE_VERSION')) {
     add_action('admin_notices', function (): void {
         ?>
             <div class="notice notice-error">
-                <p><?php echo sprintf(esc_html__('GiveWP - CryptoPay Gateway: This plugin requires GiveWP to work. You can download GiveWP by %s.', 'givewp-cryptopay'), '<a href="https://tr.wordpress.org/plugins/give/" target="_blank">' . esc_html__('clicking here', 'givewp-cryptopay') . '</a>'); ?></p>
+                <p><?php echo sprintf(esc_html__('GiveWP - CryptoPay Gateway: This plugin requires GiveWP to work. You can download GiveWP by %s.', 'givewp-cryptopay'), '<a href="https://wordpress.org/plugins/give/" target="_blank">' . esc_html__('clicking here', 'givewp-cryptopay') . '</a>'); ?></p>
             </div>
         <?php
     });

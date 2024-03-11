@@ -26,7 +26,7 @@ Review CryptoPay Lite: **<a href="https://wordpress.org/plugins/cryptopay-wc-lit
 
 Review CryptoPay Premium: **<a href="https://beycanpress.com/cryptopay/?utm_source=wporg_readme&utm_medium=cryptopay_givewp">Cryptocurrency payments for WooCommerce</a>**
 
-Review GiveWP: **<a href="https://tr.wordpress.org/plugins/give/">GiveWP</a>**
+Review GiveWP: **<a href="https://wordpress.org/plugins/give/">GiveWP</a>**
 
 See **<a href="https://cryptopay.beycanpress.net/" target="_blank">Demo</a>**
 
