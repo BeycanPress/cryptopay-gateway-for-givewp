@@ -43,21 +43,9 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\GiveWP\Models\TransactionsLite:
 load_plugin_textdomain('givewp-cryptopay', false, basename(__DIR__) . '/languages');
 
 if (!defined('GIVE_VERSION')) {
-    add_action('admin_notices', function (): void {
-        ?>
-            <div class="notice notice-error">
-                <p><?php echo sprintf(esc_html__('GiveWP - CryptoPay Gateway: This plugin requires GiveWP to work. You can download GiveWP by %s.', 'givewp-cryptopay'), '<a href="https://wordpress.org/plugins/give/" target="_blank">' . esc_html__('clicking here', 'givewp-cryptopay') . '</a>'); ?></p>
-            </div>
-        <?php
-    });
+    Helpers::requirePluginMessage('GiveWP', 'https://wordpress.org/plugins/give/');
 } elseif (Helpers::bothExists()) {
     new BeycanPress\CryptoPay\GiveWP\Loader();
 } else {
-    add_action('admin_notices', function (): void {
-        ?>
-            <div class="notice notice-error">
-                <p><?php echo sprintf(esc_html__('GiveWP - CryptoPay Gateway: This plugin is an extra feature plugin so it cannot do anything on its own. It needs CryptoPay to work. You can buy CryptoPay by %s.', 'givewp-cryptopay'), '<a href="https://beycanpress.com/product/cryptopay-all-in-one-cryptocurrency-payments-for-wordpress/?utm_source=wp_org_addons&utm_medium=givewp" target="_blank">' . esc_html__('clicking here', 'givewp-cryptopay') . '</a>'); ?></p>
-            </div>
-        <?php
-    });
+    Helpers::requireCryptoPayMessage('GiveWP');
 }
