@@ -123,6 +123,7 @@ class Processor
 
         DonationNote::create([
             'donationId' => $donation->id,
+            /* translators: %s: Gateway name */
             'content' => sprintf(esc_html__('Donation completed with %s', 'givewp-cryptopay'), $name),
         ]);
 

@@ -1,4 +1,4 @@
-=== Cryptocurrency Payment Gateway Plugin for GiveWP by CryptoPay ===
+=== Cryptocurrency Payment Gateway for GiveWP by CryptoPay ===
 Contributors: BeycanPress
 Tags: Bitcoin, Ethereum, Crypto, Payment, GiveWP
 Requires at least: 5.0
@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Cryptocurrency Payment Gateway Plugin for GiveWP, Cryptocurrency payments for WordPress, Bitcoin payments, Crypto payments, USDT, BTC, ETH, SOL
+Cryptocurrency Payment Gateway for GiveWP, Cryptocurrency payments for WordPress, Bitcoin payments, Ethereum, Crypto payments, USDT, BTC, ETH, SOL
 
 == Description ==
 
