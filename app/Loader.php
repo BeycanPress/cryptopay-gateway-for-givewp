@@ -35,7 +35,6 @@ class Loader
 
         add_action('init', [Helpers::class, 'listenSPP']);
         Hook::addFilter('payment_redirect_urls_givewp', [$this, 'paymentRedirectUrls']);
-        add_action('givewp_register_payment_gateway', [Loader::class, 'registerPaymentGateway']);
         add_filter('give_payment_details_transaction_id-cryptopay', [$this, 'transactionId']);
         add_filter('give_payment_details_transaction_id-cryptopay-lite', [$this, 'transactionIdLite']);
     }

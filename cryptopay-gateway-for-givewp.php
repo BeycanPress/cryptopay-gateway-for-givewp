@@ -19,9 +19,9 @@ defined('ABSPATH') || exit;
  * License:     GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: givewp-cryptopay
- * Tags: Cryptopay, Cryptocurrency, WooCommerce, WordPress, MetaMask, Trust, Binance, Wallet, Ethereum, Bitcoin, Binance smart chain, Payment, Plugin, Gateway, Moralis, Converter, API, coin market cap, CMC
+ * Tags: Bitcoin, Ethereum, Crypto, Payment, GiveWP
  * Requires at least: 5.0
- * Tested up to: 6.5.0
+ * Tested up to: 6.6.0
  * Requires PHP: 8.1
 */
 
@@ -35,17 +35,33 @@ define('GIVEWP_CRYPTOPAY_URL', plugin_dir_url(__FILE__));
 define('GIVEWP_CRYPTOPAY_DIR', plugin_dir_path(__FILE__));
 define('GIVEWP_CRYPTOPAY_SLUG', plugin_basename(__FILE__));
 
+use BeycanPress\CryptoPay\GiveWP\Loader;
 use BeycanPress\CryptoPay\Integrator\Helpers;
 
-Helpers::registerModel(BeycanPress\CryptoPay\GiveWP\Models\TransactionsPro::class);
-Helpers::registerLiteModel(BeycanPress\CryptoPay\GiveWP\Models\TransactionsLite::class);
+/**
+ * Register models for GiveWP
+ * @return void
+ */
+function fiveCryptoPayRegisterModels(): void
+{
+    Helpers::registerModel(BeycanPress\CryptoPay\GiveWP\Models\TransactionsPro::class);
+    Helpers::registerLiteModel(BeycanPress\CryptoPay\GiveWP\Models\TransactionsLite::class);
+}
+
+fiveCryptoPayRegisterModels();
 
 load_plugin_textdomain('givewp-cryptopay', false, basename(__DIR__) . '/languages');
 
-if (!defined('GIVE_VERSION')) {
-    Helpers::requirePluginMessage('GiveWP', 'https://wordpress.org/plugins/give/');
-} elseif (Helpers::bothExists()) {
-    new BeycanPress\CryptoPay\GiveWP\Loader();
-} else {
-    Helpers::requireCryptoPayMessage('GiveWP');
-}
+add_action('givewp_register_payment_gateway', [Loader::class, 'registerPaymentGateway']);
+
+add_action('plugins_loaded', function (): void {
+    fiveCryptoPayRegisterModels();
+
+    if (!defined('GIVE_VERSION')) {
+        Helpers::requirePluginMessage('GiveWP', 'https://wordpress.org/plugins/give/');
+    } elseif (Helpers::bothExists()) {
+        new BeycanPress\CryptoPay\GiveWP\Loader();
+    } else {
+        Helpers::requireCryptoPayMessage('GiveWP');
+    }
+});
