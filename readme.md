@@ -1,20 +1,13 @@
-## Cryptocurrency Payment Gateway Plugin for GiveWP by CryptoPay
+### What does this plugin do?
 
-First of all, we would like to point out that this plugin is not a standalone plugin. This plugin is a **<a href="https://beycanpress.com/cryptopay/?utm_source=github&utm_medium=cryptopay_givewp">cryptocurrency payment gateway for GiveWP</a>**. In other words, users who want to sell courses with cryptocurrency payments can use WordPress and GiveWP. However, this plugin is a plugin for CryptoPay and a cryptocurrency payment gateway for GiveWP. So it's actually CryptoPay, which is the main plugin that handles cryptocurrency payments for WordPress. Therefore, users must have both plugins.
+While the crypto world is developing day by day, as BeycanPress team, we continue to integrate Blockchain and Web3 into WordPress. With CryptoPay, we paved the way for commission-free and fully peer-to-peer payments in the WordPress ecosystem and developed a CryptoPay integration to one of WordPress biggest fundraising plugins like GiveWP. With the GiveWP CryptoPay integration, you will now be able to collect crypto donations from your WordPress site.
 
-Thanks to this plugin, you can receive **<a href="https://beycanpress.com/cryptopay/?utm_source=github&utm_medium=cryptopay_givewp">cryptocurrency payments</a>** from many Blockchain networks, especially Bitcoin, Ethereum, Solana, and sell paid courses with cryptocurrencies on your WordPress site with the GiveWP plugin.
+### How does it work?
 
-What is CryptoPay? (Click and watch video)
+First of all, you must have either the Lite or Premium version of CryptoPay. Because this is an integration plugin. And of course you should also have the GiveWP WordPress plugin downloaded. After enabling CryptoPay, you need to go to the payment area in your GiveWP settings and add CryptoPay as a payment option. 
 
-[![Cryptocurrency payment gateway for WordPress](https://img.youtube.com/vi/3vaoFL4XG10/0.jpg)](https://www.youtube.com/watch?v=3vaoFL4XG10)
-<br>
+As you can see in the pictures, you can then start receiving crypto donations directly with GiveWP.
 
-Review CryptoPay Lite: **<a href="https://wordpress.org/plugins/cryptopay-wc-lite/">Cryptocurrency payment gateway for GiveWP</a>**
-
-Review CryptoPay Premium: **<a href="https://beycanpress.com/cryptopay/?utm_source=github&utm_medium=cryptopay_givewp">Cryptocurrency payments for WooCommerce</a>**
-
-Review GiveWP: **<a href="https://wordpress.org/plugins/give/">GiveWP</a>**
-
-See **<a href="https://cryptopay.beycanpress.net/" target="_blank">Demo</a>**
-
-Bitcoin, Ethereum, Binance, Solana, Tron, Avalanche, Polygon, MetaMask, TrustWallet, WalletConnect, Phantom Cryptocurrency payments gateway plugin for WordPress & WooCommerce, cryptocurrency wordpress, cryptocurrency woocommerce, cryptocurrency payments, cryptocurrency payments gateway, cryptocurrency payments for woocommerce, cryptocurrency payments for wordpress, bitcoin payment for wordpress, woocommerce crypto payments, wordpress crypto payments, wordPress cryptocurrency payment plugin, woocommerce cryptocurrency payment gateway, cryptocurrency payment gateway for woocommerce, crypto payments woocommerce, accept cryptocurrency payments
+![Screenshot-1](https://i.ibb.co/mXqGdjf/Screenshot-1.png)
+![Screenshot-2](https://i.ibb.co/LJjYpjn/Screenshot-2.png)
+![Screenshot-3](https://i.ibb.co/tzhL2sZ/Screenshot-3.png)
