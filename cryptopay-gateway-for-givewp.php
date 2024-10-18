@@ -18,10 +18,10 @@ defined('ABSPATH') || exit;
  * Author URI:  https://beycanpress.com
  * License:     GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: givewp-cryptopay
+ * Text Domain: cryptopay-gateway-for-givewp
  * Tags: Bitcoin, Ethereum, Crypto, Payment, GiveWP
  * Requires at least: 5.0
- * Tested up to: 6.6.0
+ * Tested up to: 6.6.2
  * Requires PHP: 8.1
 */
 
@@ -50,7 +50,7 @@ function fiveCryptoPayRegisterModels(): void
 
 fiveCryptoPayRegisterModels();
 
-load_plugin_textdomain('givewp-cryptopay', false, basename(__DIR__) . '/languages');
+load_plugin_textdomain('cryptopay-gateway-for-givewp', false, basename(__DIR__) . '/languages');
 
 add_action('givewp_register_payment_gateway', [Loader::class, 'registerPaymentGateway']);
 

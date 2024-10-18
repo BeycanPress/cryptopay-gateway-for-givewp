@@ -19,7 +19,7 @@ class Loader
 
         // add transaction page
         Helpers::createTransactionPage(
-            esc_html__('GiveWP Transactions', 'givewp-cryptopay'),
+            esc_html__('GiveWP Transactions', 'cryptopay-gateway-for-givewp'),
             'givewp',
             10,
             [
@@ -27,7 +27,7 @@ class Loader
                     return Helpers::run('view', 'components/link', [
                         'url' => sprintf(admin_url('edit.php?post_type=give_forms&page=give-payment-history&view=view-payment-details&id=%d'), $tx->orderId), // @phpcs:ignore
                         /* translators: %d: transaction id */
-                        'text' => sprintf(esc_html__('View donate #%d', 'gf-cryptopay'), $tx->orderId)
+                        'text' => sprintf(esc_html__('View donate #%d', 'cryptopay-gateway-for-givewp'), $tx->orderId)
                     ]);
                 }
             ]
@@ -49,7 +49,7 @@ class Loader
             /* translators: %s: transaction id */
             'url' => sprintf(admin_url('admin.php?page=cryptopay_givewp_transactions&s=%s'), $transactionId),
             /* translators: %s: transaction id */
-            'text' => sprintf(esc_html__('View transaction #%s', 'gf-cryptopay'), $transactionId)
+            'text' => sprintf(esc_html__('View transaction #%s', 'cryptopay-gateway-for-givewp'), $transactionId)
         ]);
     }
 
@@ -62,7 +62,7 @@ class Loader
         return Helpers::run('view', 'components/link', [
             'url' => sprintf(admin_url('admin.php?page=cryptopay_lite_givewp_transactions&s=%s'), $transactionId),
             /* translators: %s: transaction id */
-            'text' => sprintf(esc_html__('View transaction #%s', 'gf-cryptopay'), $transactionId)
+            'text' => sprintf(esc_html__('View transaction #%s', 'cryptopay-gateway-for-givewp'), $transactionId)
         ]);
     }
 

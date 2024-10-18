@@ -21,7 +21,7 @@
             };
         },
         Fields() {
-            return ReactElement("span", null, __("You can pay with supported networks and cryptocurrencies.", "givewp-cryptopay"));
+            return ReactElement("span", null, __("You can pay with supported networks and cryptocurrencies.", "cryptopay-gateway-for-givewp"));
         },
     });
 
@@ -37,7 +37,7 @@
             };
         },
         Fields() {
-            return ReactElement("span", null, __("You can pay with supported networks and cryptocurrencies.", "givewp-cryptopay"));
+            return ReactElement("span", null, __("You can pay with supported networks and cryptocurrencies.", "cryptopay-gateway-for-givewp"));
         },
     });
 })();

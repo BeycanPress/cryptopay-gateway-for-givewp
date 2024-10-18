@@ -59,7 +59,7 @@ class Processor
     {
         return "<span> " . esc_html__(
             'You can pay with supported networks and cryptocurrencies.',
-            'givewp-cryptopay'
+            'cryptopay-gateway-for-givewp'
         ) . " </span>";
     }
 
@@ -124,7 +124,7 @@ class Processor
         DonationNote::create([
             'donationId' => $donation->id,
             /* translators: %s: Gateway name */
-            'content' => sprintf(esc_html__('Donation completed with %s', 'givewp-cryptopay'), $name),
+            'content' => sprintf(esc_html__('Donation completed with %s', 'cryptopay-gateway-for-givewp'), $name),
         ]);
 
         Session::remove($token); // Remove the token from the session.

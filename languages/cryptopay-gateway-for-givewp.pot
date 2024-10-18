@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: CryptoPay Gateway for GiveWP \n"
+"Project-Id-Version: CryptoPay Gateway for GiveWP\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-11 09:33+0000\n"
+"POT-Creation-Date: 2024-10-18 04:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,8 +13,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.6; wp-6.4.3\n"
-"X-Domain: givewp-cryptopay"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: cryptopay-gateway-for-givewp"
 
 #. Description of the plugin
 msgid "Adds Cryptocurrency payment gateway (CryptoPay) for GiveWP."
@@ -24,32 +24,14 @@ msgstr ""
 msgid "BeycanPress LLC"
 msgstr ""
 
-#: cryptopay-gateway-for-givewp.php:49 cryptopay-gateway-for-givewp.php:59
-msgid "clicking here"
+#. Name of the plugin
+msgid "CryptoPay Gateway for GiveWP"
 msgstr ""
 
-#: app/Gateways/Processor.php:126
+#. %s: Gateway name
+#: app/Gateways/Processor.php:127
 #, php-format
 msgid "Donation completed with %s"
-msgstr ""
-
-#. Name of the plugin
-msgid "CryptoPay Gateway for GiveWP "
-msgstr ""
-
-#: cryptopay-gateway-for-givewp.php:59
-#, php-format
-msgid ""
-"CryptoPay Gateway for GiveWP : This plugin is an extra feature plugin so it "
-"cannot do anything on its own. It needs CryptoPay to work. You can buy "
-"CryptoPay by %s."
-msgstr ""
-
-#: cryptopay-gateway-for-givewp.php:49
-#, php-format
-msgid ""
-"CryptoPay Gateway for GiveWP : This plugin requires GiveWP to work. You can "
-"download GiveWP by %s."
 msgstr ""
 
 #: app/Loader.php:22
@@ -62,6 +44,17 @@ msgstr ""
 
 #. URI of the plugin
 msgid "https://beycanpress.com/cryptopay/"
+msgstr ""
+
+#. %d: transaction id
+#: app/Loader.php:30
+msgid "View donate #%d"
+msgstr ""
+
+#. %s: transaction id
+#: app/Loader.php:52 app/Loader.php:65
+#, php-format
+msgid "View transaction #%s"
 msgstr ""
 
 #: app/Gateways/Processor.php:60
