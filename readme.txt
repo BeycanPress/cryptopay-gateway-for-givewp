@@ -15,7 +15,7 @@ Cryptocurrency Payment Gateway for GiveWP, Cryptocurrency payments for WordPress
 
 ### Cryptocurrency Payment Gateway Plugin for GiveWP by CryptoPay
 
-While CryptoPay and WordPresste are rapidly expanding Web3 payments, we couldn't resist developing an integration for GiveWP, the largest donation plugin. With this integration plugin, you can now easily collect crypto donations from your WordPress site via GiveWP and CryptoPay.
+While CryptoPay and WordPress are rapidly expanding Web3 payments, we couldn't resist developing an integration for GiveWP, the largest donation plugin. With this integration plugin, you can now easily collect crypto donations from your WordPress site via GiveWP and CryptoPay.
 
 Also, CryptoPay is fully developed for WordPress and supports more than 15 WordPress plugins like GiveWP (with built-in WooCommerce payment gateway)
 
