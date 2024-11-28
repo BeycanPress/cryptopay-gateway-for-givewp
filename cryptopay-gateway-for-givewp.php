@@ -11,7 +11,7 @@ defined('ABSPATH') || exit;
 
 /**
  * Plugin Name: CryptoPay Gateway for GiveWP
- * Version:     1.0.0
+ * Version:     1.0.1
  * Plugin URI:  https://beycanpress.com/cryptopay/
  * Description: Adds Cryptocurrency payment gateway (CryptoPay) for GiveWP.
  * Author:      BeycanPress LLC
@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
  * Text Domain: cryptopay-gateway-for-givewp
  * Tags: Bitcoin, Ethereum, Crypto, Payment, GiveWP
  * Requires at least: 5.0
- * Tested up to: 6.6.2
+ * Tested up to: 6.7.1
  * Requires PHP: 8.1
 */
 
@@ -29,7 +29,7 @@ defined('ABSPATH') || exit;
 require_once __DIR__ . '/vendor/autoload.php';
 
 define('GIVEWP_CRYPTOPAY_FILE', __FILE__);
-define('GIVEWP_CRYPTOPAY_VERSION', '1.0.0');
+define('GIVEWP_CRYPTOPAY_VERSION', '1.0.1');
 define('GIVEWP_CRYPTOPAY_KEY', basename(__DIR__));
 define('GIVEWP_CRYPTOPAY_URL', plugin_dir_url(__FILE__));
 define('GIVEWP_CRYPTOPAY_DIR', plugin_dir_path(__FILE__));
@@ -50,7 +50,9 @@ function fiveCryptoPayRegisterModels(): void
 
 fiveCryptoPayRegisterModels();
 
-load_plugin_textdomain('cryptopay-gateway-for-givewp', false, basename(__DIR__) . '/languages');
+add_action('init', function (): void {
+    load_plugin_textdomain('cryptopay-gateway-for-givewp', false, basename(__DIR__) . '/languages');
+});
 
 add_action('givewp_register_payment_gateway', [Loader::class, 'registerPaymentGateway']);
 
@@ -58,7 +60,7 @@ add_action('plugins_loaded', function (): void {
     fiveCryptoPayRegisterModels();
 
     if (!defined('GIVE_VERSION')) {
-        Helpers::requirePluginMessage('GiveWP', 'https://wordpress.org/plugins/give/');
+        Helpers::requirePluginMessage('GiveWP', admin_url('plugin-install.php?s=givewp&tab=search&type=term'));
     } elseif (Helpers::bothExists()) {
         new BeycanPress\CryptoPay\GiveWP\Loader();
     } else {
