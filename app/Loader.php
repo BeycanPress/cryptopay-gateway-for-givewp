@@ -18,20 +18,22 @@ class Loader
         Helpers::registerIntegration('givewp');
 
         // add transaction page
-        Helpers::createTransactionPage(
-            esc_html__('GiveWP Transactions', 'cryptopay-gateway-for-givewp'),
-            'givewp',
-            10,
-            [
-                'orderId' => function ($tx) {
-                    return Helpers::run('view', 'components/link', [
-                        'url' => sprintf(admin_url('edit.php?post_type=give_forms&page=give-payment-history&view=view-payment-details&id=%d'), $tx->orderId), // @phpcs:ignore
-                        /* translators: %d: transaction id */
-                        'text' => sprintf(esc_html__('View donate #%d', 'cryptopay-gateway-for-givewp'), $tx->orderId)
-                    ]);
-                }
-            ]
-        );
+        add_action('init', function (): void {
+            Helpers::createTransactionPage(
+                esc_html__('GiveWP Transactions', 'cryptopay-gateway-for-givewp'),
+                'givewp',
+                9,
+                [
+                    'orderId' => function ($tx) {
+                        return Helpers::run('view', 'components/link', [
+                            'url' => sprintf(admin_url('edit.php?post_type=give_forms&page=give-payment-history&view=view-payment-details&id=%d'), $tx->orderId), // @phpcs:ignore
+                            /* translators: %d: transaction id */
+                            'text' => sprintf(esc_html__('View donate #%d', 'cryptopay-gateway-for-givewp'), $tx->orderId) // @phpcs:ignore
+                        ]);
+                    }
+                ]
+            );
+        });
 
         add_action('init', [Helpers::class, 'listenSPP']);
         Hook::addFilter('payment_redirect_urls_givewp', [$this, 'paymentRedirectUrls']);
